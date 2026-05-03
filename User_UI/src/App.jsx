@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
   const [user, setUser] = useState([]);
@@ -12,18 +13,28 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Users</h1>
+  <div className="app">
+    
+    <h1 className="heading">Users</h1>
 
+    <div className="users-container">
       {user.map((user, index) => (
-        <div key={index}>
-          <img src={user.picture.large} />
-          <h3>{user.name.first} {user.name.last}</h3>
-          <p>{user.email}</p>
+        <div key={index} className="card">
+          <img
+            src={user.picture.large}
+            alt=""
+            className="avatar"
+          />
+          <h3 className="name">
+            {user.name.first} {user.name.last}
+          </h3>
+          <p className="email">{user.email}</p>
         </div>
       ))}
     </div>
-  );
+
+  </div>
+);
 }
 
 export default App

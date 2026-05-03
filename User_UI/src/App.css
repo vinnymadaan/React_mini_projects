@@ -1,6 +1,61 @@
-.card {
-  border-radius: 10px;
-  padding: 15px;
-  background: #1e1e1e;
+/* Page container */
+.app {
+  min-height: 100vh;
+  background: #0f172a;
+  padding: 30px;
   color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Cards container */
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Single card */
+.card {
+  background: #1e293b;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Profile image */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Name */
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Email */
+.email {
+  font-size: 14px;
+  color: #cbd5f5;
 }
