@@ -8,13 +8,17 @@ function App() {
 
   const fetchjokes = () => {
     setLoading(true)
+
     fetch("https://api.freeapi.app/api/v1/public/randomjokes")
       .then((res) => (res.json()))
       .then((data) => {
         console.log(data);
+
         const jokesArray = data.data.data;
         setJokes(jokesArray)
+
         const randomindex = Math.floor(Math.random() * jokesArray.length)
+        
         setCurrentJoke(jokesArray[randomindex])
 
         setLoading(false)

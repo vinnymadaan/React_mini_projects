@@ -27,10 +27,10 @@ function App() {
     fetchQuotes()
   }, [])
 
-  const nextRandomQuotes = () => {
-    const randomindex = Math.floor(Math.random() * currentQuote.length)
-    setCurrentQuote(quotes[randomindex])
-  }
+  // const nextRandomQuotes = () => {
+  //   const randomindex = Math.floor(Math.random() * currentQuote.length)
+  //   setCurrentQuote(quotes[randomindex])
+  // }
 
   return (
     <div className="app">
