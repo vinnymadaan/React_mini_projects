@@ -1,0 +1,135 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f1115;
+  color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading */
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #e4e6eb;
+}
+
+/* Card */
+.video-card {
+  display: flex;
+  gap: 20px;
+  background: #181a20;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Thumbnail */
+.thumbnail {
+  flex: 1;
+}
+
+.thumbnail img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Info */
+.video-info {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.video-desc {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.channel {
+  font-size: 14px;
+  color: #6ab0ff;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Loading Skeleton */
+.skeleton {
+  display: flex;
+  gap: 20px;
+  background: #181a20;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #2a2d35, #3a3d45, #2a2d35);
+  animation: shimmer 1.5s infinite;
+  border-radius: 10px;
+}
+
+.skeleton-img {
+  width: 40%;
+  height: 200px;
+}
+
+.skeleton-text {
+  width: 60%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-card {
+    flex-direction: column;
+  }
+}
